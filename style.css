@@ -1,0 +1,216 @@
+/* Varsayılan Stiller */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Arka Plan Stili */
+body {
+  height: 100vh;
+  background: linear-gradient(to left, #ff5e62, #ff9966);
+}
+
+/* Müzik Çalar Stili */
+.music-player {
+  font-size: 16px;
+  width: 80vw;
+  max-width: 25em;
+  background-color: #ffffff;
+  padding: 3em 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Albüm Kapak Stili */
+img {
+  width: 100%;
+  margin-top: 1.25em;
+  border-radius: 8px;
+  max-height: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Çalma Listesi Stili */
+#playlist {
+  float: right;
+}
+
+/* Şarkı Detayları Stili */
+.song-details {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.song-details #song-name {
+  font-size: 1.3em;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #2c3e50;
+}
+
+.song-details #song-artist {
+  font-size: 0.8em;
+  color: #7f8c8d;
+}
+
+/* Oynatma Seçenekleri Stili */
+.player-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 1.25rem;
+  margin: 1.25rem 0 0.6em 0;
+}
+
+.music-player button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#play,
+#pause,
+#prev,
+#next {
+  border-radius: 50%;
+}
+
+#play,
+#pause {
+  background-color: #e55039;
+  height: 2.5em;
+  width: 2.5em;
+  font-size: 1.8em;
+  color: #ecf0f1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#prev,
+#next {
+  color: #34495e;
+  font-size: 1.4em;
+}
+
+#shuffle,
+#repeat {
+  color: #bdc3c7;
+  font-size: 1em;
+}
+
+/* Görünmez Nesne Stili */
+.hide {
+  display: none;
+}
+
+/* İlerleme Çubuğu Stili */
+#progress-bar {
+  position: relative;
+  width: 100%;
+  height: 0.3em;
+  background-color: #bdc3c7;
+  margin: 1em 0;
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+#current-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  background-color: #e55039;
+  height: 100%;
+  width: 0;
+  border-radius: 2em;
+  transition: width 0.3s ease;
+}
+
+/* Zaman Bilgisi Stili */
+.time-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Open Sans", sans-serif;
+  color: #bdc3c7;
+}
+
+/* Çalma Listesi Konteyner Stili */
+#playlist-container {
+  background-color: #ecf0f1;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+/* Kapatma Butonu Stili */
+#close-button {
+  background-color: transparent;
+  border: none;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+  margin-left: 90%;
+  font-size: 20px;
+  color: #34495e;
+}
+
+/* Çalma Listesi Öğeleri Stili */
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #dcdde1;
+}
+
+/* Çalma Listesi Şarkı Detayları Stili */
+.playlist-song-details {
+  margin-left: 1rem;
+}
+
+.playlist-image-container {
+  width: 4em;
+  margin-left: 10px;
+}
+
+.playlist-song-details > span {
+  display: block;
+  color: #7f8c8d;
+}
+
+/* Aktif Buton Stili */
+button.active i {
+  color: #e55039;
+}
+
+/* Ekran Genişliği 450px'den Küçükse Stil */
+@media screen and (max-width: 450px) {
+  .music-player {
+    font-size: 14px;
+  }
+}
